@@ -1,0 +1,126 @@
+@use 'styles/style' as *;
+
+.container {
+  width: 100%;
+  // max-width: 1920px;
+  background: url('../../../public/assets/img/bg-login.png') no-repeat;
+  background-size: 100% 100%;
+  margin-bottom: 200px;
+
+  @include mobile {
+    background-size: cover;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding-top: 100px;
+
+    @include mobile {
+      width: 100%;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.logoMain {
+  height: max-content;
+  width: max-content;
+  height: 215px;
+}
+
+.title {
+  font-size: 45px;
+  margin-bottom: 30px;
+}
+
+.inputGroup {
+  margin-bottom: 20px;
+
+}
+
+.button {
+  margin-top: 20px;
+}
+
+
+.confirm {
+
+  display: flex;
+  flex-direction: column;
+
+  p {
+    margin: 15px 0;
+
+  }
+
+  input {
+    margin-right: 12px;
+  }
+
+  a,
+  span {
+    color: #18cc8b;
+    margin: 5px 0;
+
+  }
+
+  .link {
+    color: #18cc8b;
+  }
+}
+
+@include mobile {
+  .container {
+    padding: 20px;
+
+    .content {
+      flex-wrap: wrap;
+      padding: 0;
+      justify-content: center;
+
+      .mobileLogo {
+        margin-bottom: 100px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .container {
+    .content {
+      .logo {
+        width: 70%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@include laptop {
+  .container {
+    .content {
+      .logo {
+        width: 60%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .container {
+    .content {
+      .logo {
+        width: 50%;
+        margin: 0 auto;
+      }
+    }
+  }
+}

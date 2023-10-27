@@ -1,0 +1,176 @@
+@use 'styles/style' as *;
+
+.header {
+  color: $color-white;
+  background-color: $color-primary;
+  font-size: 22px;
+  width: 100vw;
+  height: 107px;
+  padding: 25px 35px 0 35px;
+
+  @include mobile{
+    // height: 90px;
+  }
+
+
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  button{
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+}
+
+.header.landing{
+  // background-color: transparent;
+  padding-top: 51px;
+  @include mobile{
+    padding-top: 41px;
+    .container{
+      justify-content: center;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: space-between;
+
+  nav{
+    @include mobile {
+      display: none;
+    }
+  }
+  ul{
+    display: flex;
+    gap: 35px;
+  }
+}
+
+.brandIcon{
+  @include mobile{
+    width: 192px;
+    height: 42px;
+  }
+}
+
+.burgerButton{
+  display: none;
+  width: 39px;
+  height: 39px;
+  @include mobile {
+    display: block;
+  }
+}
+.sidebar{
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 373px;
+  background-color: $color-primary;
+  color: $color-primary;
+  z-index: 1;
+  border-radius: 4px;
+  transition: width .1s linear;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+.sidebar.hidden{
+  width: 0;
+}
+
+@media (max-width: 373px){
+  .sidebar{
+    width: 320px;
+  }
+}
+
+.sidebarContainer{
+  box-sizing: border-box;
+  background-color: $color-white;
+  border-radius: 4px;
+  padding: 13px;
+}
+
+.sidebarTop{
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 13px;
+  margin-bottom: 18px;
+}
+
+.sidebarBrandIconWrapper{
+  width: 192px;
+  height: 42px;
+}
+
+.sidebarDevider{
+  height: 1px;
+  background-color: $color-grey;
+}
+
+.sidebarNavigation{
+  padding-top: 84px;
+  padding-left: 8px;
+  height: 560px;
+  
+  ul{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  a{
+    color: $color-black;
+    cursor: pointer;
+  }
+
+  a.active{
+    color: inherit;
+    padding-right: 10px;
+    position: relative;
+  }
+  a.active::after{
+    position: absolute;
+    margin-top: 4px;
+    display: block;
+    border-radius: 3px;
+    content: '';
+    height: 3px;
+    width: 100%;
+    background-color: $color-primary;
+  }
+}
+
+.sidebarBottom{
+  display: flex;
+  padding: 26px;
+}
+
+.profile{
+  display: flex;
+  gap: 10px;
+  @include mobile{
+    display: none;
+  }
+}
+
+.profileButton{
+  width: 23px;
+  height: 21px;
+}
+
+.sidebar .profile{
+  display: flex;
+}

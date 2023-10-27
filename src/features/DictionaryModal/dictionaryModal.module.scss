@@ -1,0 +1,91 @@
+@use 'styles/style' as *;
+
+.modal {
+  position: relative;
+  width: 820px;
+  height: 600px;
+  padding: 40px 55px 70px;
+  border-radius: 10px;
+  background-color: $color-white;
+  box-shadow: $shadow;
+}
+
+.closeButton {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  height: 30px;
+  width: 30px;
+  font-size: 25px;
+  border: none;
+  border-radius: 50%;
+  transform: rotateZ(45deg);
+  background-color:$color-bg_grey;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 40px;
+}
+
+.statistic {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+}
+
+.content {
+  height: 80%;
+  margin-top: 60px;
+  overflow-y: scroll;
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+.wordsWrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  font-size: 22px;
+}
+
+@include tablet {
+  .modal {
+    width: 740px;
+  }
+}
+
+@include mobile {
+  .modal {
+    width: 310px;
+    height: 825px;
+    padding: 30px 25px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
+  .statistic {
+    margin-top: 10px;
+  }
+
+  .content {
+    margin-top: 50px;
+  }
+}

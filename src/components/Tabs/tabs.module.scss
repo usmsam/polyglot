@@ -1,0 +1,32 @@
+@use 'styles/style' as *;
+
+.tabs {
+  display: flex;
+  column-gap: 24px;
+
+  .button {
+    border: 0px;
+
+    font-size: 22px;
+    background-color: transparent;
+    cursor: pointer;
+
+    @include mobile {
+      font-size: 18px;
+
+    }
+  }
+
+  .button:hover {
+    color: $color-primary;
+  }
+
+  .active {
+    border-bottom: 2px solid $color-primary;
+    color: $color-primary;
+  }
+
+  @include mobile {
+    overflow-x: auto;
+  }
+}

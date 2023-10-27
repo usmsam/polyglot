@@ -1,0 +1,30 @@
+@use 'styles/style' as *;
+
+.booksWrap {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.booksList {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 44px;
+}
+
+.booksTabs {
+  margin-bottom: 45px;
+}
+
+.booksTitle {
+  font-size: 40px;
+  font-weight: $fw-regular;
+  margin-bottom: 44px;
+}
+
+@include mobile {
+  .booksTitle {
+    font-size: 25px;
+  }
+}

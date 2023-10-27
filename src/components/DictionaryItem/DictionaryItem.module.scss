@@ -1,0 +1,142 @@
+@use 'styles/style' as *;
+
+.dictionaryItem {
+  margin-bottom: 86px;
+
+  &:nth-child(3n) {
+    margin-left: 70px;
+  }
+
+  &:nth-child(6n) {
+    margin-left: 0;
+  }
+
+  &:nth-child(7n) {
+    margin-left: 70px;
+  }
+
+  @include mobile-tablet {
+    &:nth-child(3n) {
+      margin-left: 0;
+    }
+
+    &:nth-child(6n) {
+      margin-left: 0;
+    }
+
+    &:nth-child(7n) {
+      margin-left: 0;
+    }
+  }
+
+  @include mobile {
+    min-width: 100%;
+    margin: 0;
+    padding-top: 30px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      border-bottom: 1px solid $color-border-grey;
+    }
+  }
+
+  @include mobile {
+    &:nth-child(3n) {
+      margin-left: 0;
+    }
+
+    &:nth-child(6n) {
+      margin-left: 0;
+    }
+
+    &:nth-child(7n) {
+      margin-left: 0;
+    }
+  }
+}
+
+.dictionaryItemLevel {
+  @include mobile {
+    min-width: 100%;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+}
+
+.dictionaryItemWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dictionaryIcon {
+  width: 25px;
+  height: 25px;
+}
+
+.dictionaryWords {
+  margin-top: 18px;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.dictionaryWordsMobile {
+  margin-top: 18px;
+}
+
+.dictionaryIconsMobile {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.dictionaryIcons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 25px;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.dictionaryTitle {
+  @include mobile {
+    display: none;
+  }
+}
+
+.dictionaryIcon {
+  @include mobile {
+    margin-bottom: 20px;
+  }
+}
+
+.dictionaryWrapLevel {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dictionaryLevel {
+  white-space: nowrap;
+  margin-top: 18px;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.dictionaryLevelMobile {
+  margin-top: 18px;
+}
+
+.dictionaryTrash {
+  margin-left: 40px;
+}

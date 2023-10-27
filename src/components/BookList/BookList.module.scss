@@ -1,0 +1,12 @@
+@use 'styles/style' as *;
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px 50px;
+
+  @include mobile {
+    gap: 20px 20px;
+    grid-template-columns: 1fr;
+  }
+}

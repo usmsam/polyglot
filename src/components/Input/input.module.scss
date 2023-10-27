@@ -1,0 +1,16 @@
+@use 'styles/style' as *;
+
+.input {
+  width: 100%;
+  max-width: 345px;
+  height: 37px;
+  padding: 11px 14px 7px;
+  border: 1px solid $color-grey;
+  border-radius: 5px;
+  line-height: 19px;
+  font-weight: $fw-regular;
+
+  @include mobile {
+    max-width: 255px;
+  }
+}

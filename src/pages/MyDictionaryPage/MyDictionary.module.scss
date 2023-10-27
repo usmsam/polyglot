@@ -1,0 +1,18 @@
+@use 'styles/style' as *;
+
+.dictionaryWrap {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.dictionaryTitle {
+  font-size: 40px;
+  font-weight: $fw-regular;
+  margin-bottom: 44px;
+
+  @include mobile {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,1 @@
+export const noLayout = ['/login', '/registration', '/example']

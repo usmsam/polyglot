@@ -1,0 +1,32 @@
+@use 'styles/style' as *;
+
+.wrapper {
+  .icon {
+    width: 100%;
+    height: 100%;
+  }
+
+  .icon_white {
+    fill: $color-white;
+    stroke: $color-white;
+  }
+
+  .icon_primary {
+    fill: $color-primary;
+    stroke: $color-primary;
+  }
+
+  .icon_grey {
+    fill: $color-grey;
+    stroke: $color-grey;
+  }
+
+  .icon_black {
+    fill: $color-black;
+    stroke: $color-black;
+  }
+}
+
+.wrapper_pointer {
+  cursor: pointer;
+}

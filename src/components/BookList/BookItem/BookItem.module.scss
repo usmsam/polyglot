@@ -1,0 +1,89 @@
+@use 'styles/style' as *;
+
+.text_medium {
+  font-size: 16px;
+
+  @mixin mobile {
+    font-size: 14px;
+  }
+}
+
+.item {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 10px;
+  max-width: 330px;
+  width: 100%;
+
+  @include mobile {
+    margin: 0 auto;
+  }
+  .cover {
+    max-width: 133px;
+
+    @mixin mobile {
+      max-width: 122px;
+      max-height: 197px;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    @include mobile {
+      row-gap: 2px;
+    }
+  }
+  .headingContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $color-grey;
+
+    @include mobile {
+      padding-bottom: 22px;
+    }
+  }
+  .heading {
+    font-size: 22px;
+    line-height: 26.25px;
+
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+  // .author {
+  // }
+  .genreAndProgress {
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+    margin-top: 13px;
+  }
+  // .genre {
+  // }
+  .progress {
+    span {
+      color: $color-primary;
+    }
+  }
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 15px;
+    margin-top: auto;
+  }
+  .read {
+    font-size: 18px;
+    padding: 7px 27px;
+  }
+  .deleteBtn {
+    width: 22.5px;
+    height: 22.5px;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+}

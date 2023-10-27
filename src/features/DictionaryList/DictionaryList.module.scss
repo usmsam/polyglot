@@ -1,0 +1,43 @@
+@use 'styles/style' as *;
+
+.dictionaryList {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 62px;
+  margin-top: 50px;
+  max-height: 285px;
+
+  @include mobile {
+    max-height: none;
+  }
+}
+
+.dictionaryPlusWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  padding: 6px;
+  border-radius: 50%;
+  border: 1px solid $color-primary;
+}
+
+.dictionaryPlus {
+  width: 17px;
+  height: 17px;
+}
+
+.dictionaryAdd {
+  margin: 15px auto;
+  cursor: pointer;
+  display: flex;
+  margin-top: 40px;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dictionaryNew {
+  color: $color-primary;
+}

@@ -1,0 +1,95 @@
+@use 'styles/style' as *;
+
+.footer {
+    width: 100%;
+    background-color: #18CC8B;
+}
+
+.container {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 35px 0 28px 0;
+    margin: auto;
+}
+
+.footerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 255px;
+}
+
+.title {
+    color: $color-white;
+    margin-right: 15px;
+    font-size: 28px;
+}
+
+.socialNetworks {
+    display: flex;
+    column-gap: 14px;
+    margin-top: 12px;
+}
+
+.icon {
+    width: 31px;
+    height: 31px;
+    cursor: pointer;
+}
+
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    color: $color-white;
+}
+
+.bottomTitle {
+    font-size: 18px;
+}
+
+.agreement {
+    font-size: 16px;
+}
+
+@include mobile {
+    .footerTop {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    .icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .title {
+        margin: auto;
+    }
+
+    .socialNetworks {
+        justify-content: center;
+        margin-top: 28px;
+    }
+
+    .icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .footerBottom {
+        flex-direction: column;
+        margin-top: 70px;
+    }
+
+    .bottomTitle {
+        order: 1;
+        margin-top: 16px;
+    }
+}

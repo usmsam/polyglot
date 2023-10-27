@@ -1,0 +1,112 @@
+@use 'styles/style' as *;
+
+.wrapper {
+  padding: 130px 0 190px 0;
+  @include container;
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 125px;
+  }
+
+  .infoText {
+    max-width: 530px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .description {
+    margin-top: 16px;
+    font-size: 22px;
+  }
+
+  .imgWrapper {
+    width: 356px;
+    height: 368px;
+  }
+
+  .social {
+    margin-top: 255px;
+  }
+
+  .socialTitle {
+    margin: auto;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .socialIcons {
+    display: flex;
+    justify-content: center;
+    column-gap: 105px;
+    margin-top: 45px;
+  }
+
+  .socialIcon {
+    width: 100px;
+    height: 100px;
+  }
+
+  @include tablet {
+    .infoText {
+      max-width: 450px;
+    }
+
+    .imgWrapper {
+      width: 240px;
+      height: 250px;
+    }
+  }
+
+  @include mobile {
+    .info {
+      flex-direction: column;
+    }
+
+    .infoText {
+      max-width: 280px;
+      margin-top: 45px;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 25px;
+    }
+
+    .description {
+      margin-top: 18px;
+      font-size: 18px;
+    }
+
+    .imgWrapper {
+      width: 273px;
+      height: 273px;
+    }
+
+    .reverse {
+      flex-direction: column-reverse;
+    }
+
+    .social {
+      margin-top: 200px;
+    }
+
+    .socialTitle {
+      max-width: 220px;
+      font-size: 25px;
+    }
+
+    .socialIcons {
+      column-gap: 70px;
+    }
+
+    .socialIcon {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}

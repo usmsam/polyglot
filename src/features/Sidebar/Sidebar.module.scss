@@ -1,0 +1,56 @@
+@use 'styles/style' as *;
+
+.sidebar {
+  margin: 0 45px 0 0;
+  padding: 0;
+  padding-top: 100px;
+
+  @include mobile {
+    width: 100%;
+    max-width: 373px;
+    display: none;
+  }
+  @include tablet{
+    display: none;
+  }
+}
+
+.sidebarIcon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  margin-right: 9px;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.sidebarList {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 33px 0;
+  cursor: pointer;  
+  white-space: nowrap;
+
+  &:first-child {
+    margin: 0;
+  }
+}
+
+.sidebarListActive {
+  color: $color-primary;
+
+  @include mobile {
+    width: max-content;
+    display: block;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      border: 1px solid $color-primary;
+    }
+  }
+}
